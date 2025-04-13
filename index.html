@@ -4,41 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Thiệp Mời Cưới Tá&Vi</title>
-
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-ACo+9X3H39QEGMyE7f27H6IVLGQ6JBr1ClMY5CDIv8HmkJId8SuwzAl5pGeXwaNwTzzgAH3oRkKF0XslTQ5pOA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"
+  />
   <!-- Favicon (Logo ở thanh địa chỉ) -->
   <link rel="icon" href="images/logo_damcuoitrantahoangvi.PNG" type="image/png" />
 
-  <!-- Google Fonts: Dùng font mang hơi hướng cổ điển, vintage -->
+  <!-- Google Fonts -->
   <link
-  href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
-  rel="stylesheet"
-/>
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
+    rel="stylesheet"
+  />
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
   <link
-  href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
-  rel="stylesheet"
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
-  rel="stylesheet"
-/>
-<link
-href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
-rel="stylesheet"
-/>
-
-<link
-  href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
-  rel="stylesheet"
-/>
-
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     /* ========== Reset cơ bản ========== */
@@ -51,25 +55,22 @@ rel="stylesheet"
       scroll-behavior: smooth;
     }
     body {
-      /* Font mang hơi hướng cổ điển */
       font-family: 'Cormorant Garamond', serif;
-      /* Màu nền kiểu vintage (có thể thay đổi nếu muốn) */
       background: linear-gradient(120deg, #f8ecd8 30%, #fff8f2 100%);
       color: #473938;
       overflow-x: hidden;
     }
 
     :root {
-      /* Thay đổi tông màu sang nâu vintage và be */
-      --main-color: #8B4513;          /* Màu chính (nâu) */
-      --secondary-color: #f8ecd8;     /* Màu nền nhạt, cổ điển */
-      --text-color: #473938;          /* Màu chữ */
-      --heading-color: #8B4513;       /* Màu tiêu đề (nâu đậm) */
+      --main-color: #8B4513;         
+      --secondary-color: #f8ecd8;    
+      --text-color: #473938;         
+      --heading-color: #8B4513;      
       --section-spacing: 60px;
       --container-width: 900px;
 
       --primary-shadow: rgba(139, 69, 19, 0.3);
-      --hover-color: #5C3611;         /* Màu hover đậm hơn của nâu */
+      --hover-color: #5C3611;        
     }
 
     /* ========== Preloader ========== */
@@ -144,50 +145,101 @@ rel="stylesheet"
 
     /* ========== Nút Menu ========== */
     .floating-menu {
-      position: fixed;
-      bottom: 80px; /* cách nút back-to-top 1 đoạn */
-      right: 20px;
-      z-index: 1000;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-    .menu-toggle {
-      background-color: var(--main-color);
-      color: #fff;
-      border: none;
-      padding: 10px 14px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-bottom: 5px;
-      font-size: 1rem;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-    .menu-toggle:hover {
-      background-color: var(--hover-color);
-    }
-    .menu-content {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px;
-    }
-    .menu-content.show {
-      display: flex;
-    }
-    .menu-content a {
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    .menu-content a:hover {
-      color: var(--main-color);
-    }
+  position: fixed;
+  bottom: 80px; 
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Nút mở/đóng menu */
+.menu-toggle {
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.menu-toggle:hover {
+  background-color: var(--hover-color);
+}
+
+/* Menu dropdown */
+.menu-content {
+  position: absolute;       /* QUAN TRỌNG: để menu nổi lên, có thể “rơi xuống” */
+  bottom: 50px;            /* Căn vị trí để bung xuống dưới nút (tuỳ chỉnh) */
+  right: 0;
+
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 180px;            /* Độ rộng tuỳ chỉnh */
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  /* Ẩn ban đầu */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  
+  /* Dùng flex-column để xếp chồng các item */
+  display: flex; 
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Khi có class .show thì hiển thị */
+.menu-content.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu-content a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+.menu-content a:hover {
+  background-color: #f0e5da; /* Nhẹ nhàng để hover */
+  color: var(--main-color);
+}
+
+/* Submenu chia sẻ */
+.share-submenu {
+  display: flex; 
+  flex-direction: row; 
+  gap: 8px;
+}
+
+.share-btn {
+  background-color: #ffffff;
+  border: 2px solid #d2b79c;
+  padding: 8px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 40px; 
+  height: 40px; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+.share-btn:hover {
+  background-color: #b7e10e;
+  border-color: #a1cd0c;
+}
 
     /* ========== Hoa rơi ========== */
     #flower-container {
@@ -329,29 +381,10 @@ rel="stylesheet"
       from {opacity: 0;}
       to   {opacity: 1;}
     }
-    .countdown {
-      background-color: rgba(255, 255, 255, 0.15);
-      padding: 10px 20px;
-      border-radius: 8px;
-      display: inline-block;
-      margin-bottom: 20px;
-      font-size: 1rem; /* Tăng nhẹ */
-      font-weight: 600;
-    }
-    .countdown p {
-      font-weight: bold;
-      margin-bottom: 5px;
-      color: #fff;
-      font-size: 1rem;
-    }
-    #countdown-timer {
-      font-size: 1rem;
-      color: #fff;
-    }
+
     .hero-couple-name {
-      /* Font Playfair Display cho tên cặp đôi */
       font-family: 'Playfair Display', serif;
-      font-size: 1.8rem; /* Tăng nhẹ */
+      font-size: 1.8rem;
       margin-bottom: 5px;
       color: #fffaec;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
@@ -415,37 +448,6 @@ rel="stylesheet"
         max-width: 65%;
         font-size: 0.85rem;
       }
-
-       /* Thu nhỏ cả khung .calendar-box */
-  .calendar-box {
-    width: 220px;    /* giảm từ 280px */
-    height: 220px;   /* giảm từ 280px */
-    padding: 10px;   /* bớt padding */
-  }
-
-  /* Thu nhỏ font tiêu đề tháng */
-  .calendar-box h3 {
-    font-size: 1.1rem; 
-  }
-
-  /* Giảm khoảng cách giữa các ô ngày */
-  .calendar-body {
-    gap: 4px;  /* thay vì 6px */
-  }
-
-  /* Các ô ngày nhỏ hơn, chữ cũng giảm */
-  .day {
-    height: 30px;     /* thay vì 45px */
-    font-size: 0.75rem; /* giảm chữ một chút */
-  }
-
-  /* Riêng tên ngày T2, T3,... */
-  .day.day-name {
-    font-size: 0.72rem; 
-  }
-
-  /* Nếu muốn ô ngày Chủ Nhật, T2... cũng co lại 
-     => .day { ... } như trên là đủ. */
     }
 
     /* ========== Section Wrapper ========== */
@@ -456,13 +458,13 @@ rel="stylesheet"
     .section-wrapper {
       width: 100%;
       max-width: var(--container-width);
-      margin: 0 auto; /* thay vì var(--section-spacing) auto */
-      padding: 0 20px;
+      margin: 0 auto;
+
       text-align: center;
     }
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
+      font-size: 1.5rem;
       color: var(--heading-color);
       margin-bottom: 30px;
       display: inline-block;
@@ -480,19 +482,20 @@ rel="stylesheet"
       border-radius: 2px;
     }
 
-    /* ========== FAMILY INFO BOX ========== */
-    .family-info-box {
-  max-width: 700px;
-  margin: 40px auto; 
-  position: relative;
-  z-index: 10;
-  overflow: hidden;
-  border: 5px solid #d1bfa0; 
-  border-radius: 20px;
-  background: #fbf6ef;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  padding: 20px; /* matching invite-wrapper */
-}
+      /* ========== FAMILY INFO BOX ========== */
+      .family-info-box {
+      max-width: 700px;
+     
+      margin: 40px auto;
+      position: relative;
+      z-index: 10;
+      overflow: hidden;
+      border: 5px solid #d1bfa0;
+      border-radius: 20px;
+      background: #fbf6ef;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
 
     .family-info-box::before,
     .family-info-box::after {
@@ -517,11 +520,14 @@ rel="stylesheet"
     }
 
     .family-info-box .quote {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Pacifico', cursive;
+
+
+
       font-style: italic;
-      margin-bottom: 10px; /* giảm bớt từ 30px */
+      margin-bottom: 10px;
       color: var(--heading-color);
-      font-size: 0.96rem; 
+      font-size: 0.80rem;
     }
 
     .family-info-container {
@@ -529,7 +535,7 @@ rel="stylesheet"
       grid-template-columns: 1fr 40px 1fr;
       align-items: start;
       gap: 10px;
-      margin-bottom: 0; /* nếu không muốn thừa khoảng trắng */
+      margin-bottom: 0;
     }
 
     .family-info-container h3 {
@@ -541,11 +547,23 @@ rel="stylesheet"
     }
 
     .parents-info p {
+     
       font-size: 0.72rem;
       margin: 4px 0;
       color: var(--text-color);
       line-height: 1.4;
     }
+
+.quote{ 
+  font-family: 'Pacifico', cursive;
+
+
+
+font-style: italic;
+margin-bottom: 10px;
+color: var(--heading-color);
+font-size: 0.75rem;
+}
 
     .divider {
       display: flex;
@@ -558,7 +576,6 @@ rel="stylesheet"
       height: 30px;
       opacity: 0.9;
     }
-
     /* ========== COUPLE SECTION ========== */
     .couple-section {
       display: flex;
@@ -659,195 +676,211 @@ rel="stylesheet"
       box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
 
-    /* ========== INVITATION (Thư Mời) ========== */
-    .invitation {
-      font-family: 'Cormorant Garamond', serif;
-      background-color: #fef9f4;
-      border-radius: 8px;
-      padding: 25px 20px;
-      text-align: center;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      max-width: 600px;
-      margin: auto;
-    }
-    .invitation-container {
-      padding: 10px;
-    }
-    .invite-message {
-      font-style: italic;
-      font-size: 1.2rem;
-      color: var(--text-color);
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-    .invitation-details {
-      margin-top: 10px;
-    }
-    .detail-item {
-      margin-bottom: 15px;
-    }
-    .detail-title {
-      font-weight: bold;
-      font-size: 1.1rem;
-      color: var(--heading-color);
-      display: block;
-      margin-bottom: 5px;
-    }
-    .highlight-text {
-      font-size: 1.0rem;
-      font-weight: bold;
-      color: #473938;
-    }
-    .highlight-time {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      color: #AA5936;
-      line-height: 1.4;
-    }
-    .highlight-time strong {
-      font-family: 'Cormorant Garamond', serif;
-      color: inherit;
-      font-size: 1.3rem;
-      margin-right: 5px;
-    }
-    .lunar-date {
-      font-size: 0.9rem;
-      color: #777;
-      font-style: italic;
-      margin-top: 5px;
-    }
-    .schedule {
-      list-style-type: none;
-      padding: 0;
-      margin: 15px 0;
-    }
-    .schedule li {
-      margin: 8px 0;
-      font-size: 1rem;
-      color: var(--text-color);
-    }
-    .schedule .time {
-      font-weight: bold;
-      color: var(--main-color);
-    }
-
-    /* ========== MAP & CALENDAR (kết hợp chung) ========== */
-    .map-calendar-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-      flex-wrap: nowrap; /* Luôn nằm trên 1 hàng */
-    }
-    .wedding-calendar-container,
-    .map-container {
-      flex: 1;
-      min-width: 300px;
-      max-width: 550px;
-    }
-
-    /* ========== WEDDING CALENDAR ========== */
-    .calendar-frame {
-      display: inline-block;
-      background: #fff8f2;
-      padding: 20px 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    /* ========== Invitation Wrapper chung ========== */
+    .invite-wrapper {
+      max-width: 700px;
+      margin: 40px auto;
       position: relative;
+      z-index: 10;
       overflow: hidden;
-      width: 100%;
-      max-width: 500px;
-      border: 3px dotted var(--main-color);
+      border: 5px solid #d1bfa0;
+      border-radius: 20px;
+      background: #fbf6ef;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
     }
-    .calendar-decor-bottom {
+    .invite-wrapper::before,
+    .invite-wrapper::after {
+      content: "";
       position: absolute;
-      bottom: 8px; 
-      right: 8px;
-      color: var(--heading-color);
-      font-size: 1.2rem;
-      font-family: 'Playfair Display', cursive;
-      transform: rotate(-5deg);
+      width: 60px;
+      height: 60px;
+      background: url('https://cdn-icons-png.flaticon.com/512/3402/3402145.png') no-repeat center/contain;
+      opacity: 0.15;
+      transform: rotate(-20deg);
     }
-    .calendar-header {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
+    .invite-wrapper::before {
+      top: 10px;
+      left: 10px;
+    }
+    .invite-wrapper::after {
+      bottom: 10px;
+      right: 10px;
+      transform: rotate(20deg);
+    }
+    .invite-content {
+      text-align: center;
+      padding: 20px;
+    }
+    .invite-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;  /* Giữ 1.5rem */
+      margin-bottom: 12px;
+      color: var(--heading-color);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      text-transform: uppercase;
+    }
+    .invite-content p {
+      line-height: 1.6;
       font-size: 1.1rem;
       margin-bottom: 10px;
+      color: #473938;
+    }
+    .invite-content p span {
+      font-family: "Playfair Display", serif;
+      color: #473938;
+      font-size: 0.9rem;
+    }
+    .invite-content .highlight {
       font-weight: bold;
-      color: var(--heading-color);
-      position: relative;
-      z-index: 1;
+      color: #473938;
+      font-size: 0.9rem;
     }
-    .calendar-body {
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-    .weekdays {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      margin-bottom: 8px;
-      font-weight: bold;
-      color: #333;
-      font-size: 0.8rem;
-    }
-    .week {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      margin-bottom: 8px;
-    }
-    .day {
-      height: 45px;
+   
+    .map-calendar-section {
+      /* Giữ lại để bọc map, sửa lại cho responsive */
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+    .map-container {
+      width: 100%;
+      max-width: 400px;
+      height: 230px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      flex-shrink: 0;
       border-radius: 6px;
-      font-size: 0.85rem;
-      color: #555;
-      transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-      margin: 2px;
     }
-    .day:hover {
-      transform: scale(1.1);
-      background-color: #fce9e9;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    .blank {
-      opacity: 0;
-      pointer-events: none;
-    }
-    .wedding-date {
-      position: relative;
-      font-weight: bold;
-      font-size: 1.3rem;
-      color: var(--heading-color);
-    }
-    .wedding-date::before {
-      content: "♥";
+    .invite-footer-decor {
       position: absolute;
-      font-size: 1.1rem;
-      color: var(--heading-color);
-      top: -6px;
+      bottom: -40px;
       left: 50%;
       transform: translateX(-50%);
+      width: 200px;
+      height: 80px;
+      background: radial-gradient(rgba(139,69,19,0.2), transparent 70%);
+      filter: blur(5px);
+      z-index: -1;
+    }
+    .map-button-container {
+      text-align: center;
+    }
+    .open-map-btn {
+      background-color: var(--main-color);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+    .open-map-btn:hover {
+      background-color: var(--hover-color);
     }
 
-    /* ========== MAP CONTAINER ========== */
-    .map-container {
+    /* ========== Countdown Mới ========== */
+    .countdown-container {
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+      padding: 15px 25px;
+      border-radius: 8px;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      animation: fadeIn 1.5s ease;
+    }
+    .countdown-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+    .countdown-timer {
       display: flex;
+      gap: 10px;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      border-radius: 8px;
-      overflow: hidden;
     }
-    .map-iframe-container {
-      width: 100%;
-      max-width: 550px;
-      overflow: hidden;
-      border-radius: 8px;
+    .time-box {
+      background-color: rgba(255,255,255,0.15);
+      padding: 10px 15px;
+      border-radius: 6px;
+      min-width: 60px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .time-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    }
+    .time-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    /* ========== Time Info Box ========== */
+    .time-info-box {
+      margin-top: 15px;
+      background-color: #fff8f2;
+      border: 2px dashed #d2b79c;
+      padding: 15px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .time-info-header {
+      font-family: 'Dancing Script', serif;
+      font-size: 1.3rem;
+      color: var(--heading-color);
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .time-info-header::after {
+      content: "";
+      display: block;
+      width: 40%;
+      height: 3px;
+      background-color: var(--main-color);
+      margin: 5px auto 0;
+      border-radius: 2px;
+    }
+    .time-info-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .time-info-icon img {
+      width: 24px;
+      height: 24px;
+      opacity: 0.8;
+    }
+    .time-info-text {
+      font-family: 'Dancing Script', serif;
+      font-size: 1rem;
+      color: #473938;
+      line-height: 1.4;
+    }
+    .time-info-text strong {
+      color: var(--main-color);
+    }
+    .smaller-text {
+      font-size: 0.72rem !important;
     }
 
     /* ========== ALBUM CƯỚI + Lightbox ========== */
@@ -855,7 +888,8 @@ rel="stylesheet"
       margin-top: 40px;
     }
     .album-section h3 {
-      font-size: 1.6rem;
+      /* Thu nhỏ về 1.5rem cho đồng bộ với section-title */
+      font-size: 1.5rem !important;
       color: var(--heading-color);
       margin: 30px 0 20px;
       text-transform: uppercase;
@@ -911,8 +945,6 @@ rel="stylesheet"
       height: auto;
       display: block;
     }
-
-    /* Lightbox Overlay */
     .lightbox-overlay {
       position: fixed;
       top: 0; 
@@ -920,7 +952,7 @@ rel="stylesheet"
       width: 100%;
       height: 100%;
       background: rgba(0,0,0,0.8);
-      display: none; /* ẩn mặc định */
+      display: none;
       align-items: center;
       justify-content: center;
       z-index: 9990;
@@ -945,7 +977,7 @@ rel="stylesheet"
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden; 
+      overflow: hidden;
       position: relative;
       width: 80vw;
       height: 80vh;
@@ -992,7 +1024,56 @@ rel="stylesheet"
       right: 10px;
     }
 
-    /* QR SECTION */
+    /* ========== RSVP ========== */
+    .rsvp-section {
+      background-color: #fff;
+      margin-top: 40px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    .rsvp-section h2 {
+      /* Thu nhỏ về 1.5rem cho đồng bộ */
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; 
+      color: var(--heading-color);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .rsvp-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .rsvp-section label {
+      font-weight: bold;
+      color: #473938;
+      font-size: 1rem;
+    }
+    .rsvp-section input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .rsvp-section button {
+      background-color: var(--main-color);
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .rsvp-section button:hover {
+      background-color: var(--hover-color);
+    }
+
+    /* ========== QR SECTION ========== */
     .qr-section .section-title {
       margin-bottom: 10px;
     }
@@ -1065,54 +1146,6 @@ rel="stylesheet"
       background-color: #5e4a43;
     }
 
-    /* ========== RSVP ========== */
-    .rsvp-section {
-      background-color: #fff;
-      margin-top: 40px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: left;
-    }
-    .rsvp-section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--heading-color);
-      margin-bottom: 15px;
-      text-align: center;
-    }
-    .rsvp-section form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .rsvp-section label {
-      font-weight: bold;
-      color: #473938;
-      font-size: 1rem;
-    }
-    .rsvp-section input {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .rsvp-section button {
-      background-color: var(--main-color);
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-    .rsvp-section button:hover {
-      background-color: var(--hover-color);
-    }
-
     /* ========== DIGITAL GUESTBOOK ========== */
     .guestbook-section {
       margin-top: 40px;
@@ -1122,8 +1155,9 @@ rel="stylesheet"
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .guestbook-section h2 {
+      /* Thu nhỏ về 1.5rem cho đồng bộ */
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
+      font-size: 1.5rem; 
       color: var(--heading-color);
       margin-bottom: 15px;
       text-align: center;
@@ -1335,304 +1369,54 @@ rel="stylesheet"
       color: var(--heading-color);
     }
 
-    /* ========== Thiết kế 2 khung TIỆC CƯỚI NHÀ TRAI - TIỆC CƯỚI NHÀ GÁI ========== */
-    .invite-wrapper {
-      max-width: 700px;
-      margin: 40px auto;
-      position: relative;
-      z-index: 10;
-      overflow: hidden;
-      border: 5px solid #d1bfa0;        /* Màu be nâu nhạt */
-      border-radius: 20px;
-      background: #fbf6ef;             /* Màu nền khung */
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 20px;
-    }
-    .invite-wrapper::before,
-    .invite-wrapper::after {
-      content: "";
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      background: url('https://cdn-icons-png.flaticon.com/512/3402/3402145.png') no-repeat center/contain;
-      opacity: 0.15;
-      transform: rotate(-20deg);
-    }
-    .invite-wrapper::before {
-      top: 10px;
-      left: 10px;
-    }
-    .invite-wrapper::after {
-      bottom: 10px;
-      right: 10px;
-      transform: rotate(20deg);
-    }
-
-    .invite-header {
-      text-align: center;
-      color: #fff;
-      padding: 40px 20px 30px;
-      background: linear-gradient(135deg, #8B4513 0%, #5C3611 100%);
-      position: relative;
-    }
-    .invite-header h1 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      font-family: "Playfair Display", serif;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    }
-    .invite-content {
-      text-align: center;
-      padding: 20px;
-    }
-    /* Đã chỉnh: Giảm font-size xuống 1.6rem */
-    .invite-content h2 {
-      font-family: "Playfair Display", serif;
-      font-size: 1.5rem; /* Giảm bớt */
-      margin-bottom: 12px;
-      color: var(--heading-color);
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-      text-transform: uppercase;
-    }
-    .invite-content p {
-      line-height: 1.6;
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-      color: #473938;
-    }
-    .invite-content .highlight {
-      font-weight: bold;
-      color: var(--heading-color);
-      font-size: 1.15rem;
-    }
-
-    .map-calendar-section {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-      flex-wrap: nowrap;
-    }
-    .calendar-box {
-      background: #fff0f0;
-      border: 2px dashed #dec9a7;
-      border-radius: 10px;
-      width: 280px;
-      height: 280px;
-      padding: 15px 20px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.12);
-      flex-shrink: 0;
-      overflow: auto;
-    }
-    .calendar-box h3 {
-      text-align: center;
-      font-family: "Playfair Display", serif;
-      font-size: 1.5rem;
-      color: #8B4513;
-      margin-bottom: 10px;
-      position: relative;
-    }
-    .calendar-box h3::after {
-      content: "";
-      display: block;
-      width: 40px;
-      height: 3px;
-      background: #d2b79c;
-      margin: 5px auto 0;
-      border-radius: 3px;
-    }
-    .calendar-header {
-      text-align: center;
-      color: #8B4513;
-      font-weight: bold;
-      margin: 8px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-    }
-    .calendar-body {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 6px;
-      margin-top: 8px;
-      font-size: 0.85rem;
-      text-align: center;
-    }
-    .day {
-      background: #fffefc;
-      padding: 4px 0;
-      border-radius: 4px;
-      color: #666;
-      transition: background 0.3s ease, transform 0.3s ease;
-      cursor: pointer;
-      position: relative;
-    }
-    .day:hover {
-      background: #ffecec;
-      transform: scale(1.05);
-    }
-    .day-name {
-      font-weight: bold;
-      background: #fff3f2;
-    }
-    .day.wedding-date {
-      background: #8B4513;
-      font-weight: bold;
-      color: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-    .day.wedding-date::after {
-      content: "❤";
-      position: absolute;
-      font-size: 1rem;
-      right: 4px;
-      bottom: 0;
-      color: #fff;
-      opacity: 0.8;
-      transform: rotate(-20deg);
-    }
-    .map-container {
-      width: 280px;
-      height: 280px;
-      background: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      flex-shrink: 0;
-      border-radius: 6px;
-    }
-    .invite-footer-decor {
-      position: absolute;
-      bottom: -40px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 200px;
-      height: 80px;
-      background: radial-gradient(rgba(139,69,19,0.2), transparent 70%);
-      filter: blur(5px);
-      z-index: -1;
-    }
-
-    @media (max-width: 600px) {
-      .map-calendar-section {
-        transform: scale(0.8);
-        transform-origin: top center;
-      }
-    }
-
-    /* ========== Countdown Mới ========== */
-    .countdown-container {
-      background-color: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(5px);
-      padding: 15px 25px;
-      border-radius: 8px;
-      display: inline-block;
-      text-align: center;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      animation: fadeIn 1.5s ease; /* hoặc tuỳ ý */
-    }
-
-    .countdown-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 10px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    }
-
-    .countdown-timer {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .time-box {
-      background-color: rgba(255,255,255,0.15);
-      padding: 10px 15px;
-      border-radius: 6px;
-      min-width: 60px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-
-    .time-value {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #fff;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-    }
-
-    .time-label {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #fff;
-      opacity: 0.9;
-    }
-
-    /* ========== Time Info Box ========== */
-    .time-info-box {
-      margin-top: 15px;
-      background-color: #fff8f2;
-      border: 2px dashed #d2b79c;
-      padding: 15px;
-      border-radius: 10px;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .time-info-header {
-      font-family: 'Dancing Script', serif;
-      font-size: 1.3rem;
-      color: var(--heading-color);
-      margin-bottom: 10px;
-      position: relative;
-    }
-
-    .time-info-header::after {
-      content: "";
-      display: block;
-      width: 40%;
-      height: 3px;
-      background-color: var(--main-color);
-      margin: 5px auto 0;
-      border-radius: 2px;
-    }
-
-    .time-info-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* Submenu chia sẻ */
+    .share-submenu {
+      display: flex; 
+      flex-direction: row; 
       gap: 8px;
-      margin-bottom: 8px;
+      margin-top: 10px;
     }
-
-    .time-info-icon img {
-      width: 24px;
-      height: 24px;
-      opacity: 0.8;
+    .share-btn {
+      background-color: #ffffff;
+      color: #fff;
+      border: 2px solid #d2b79c;
+      padding: 8px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+      text-align: center;
+      width: 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center;
+      justify-content: center;
     }
-
-    .time-info-text {
-      font-family: 'Dancing Script', serif;
-      font-size: 1rem;
-      color: #473938;
-      line-height: 1.4;
+    .share-btn:hover {
+      background-color: #b7e10e;
     }
-
-    .time-info-text strong {
-      color: var(--main-color);
+    .share-facebook { background-color: #ffffffc6; }
+    .share-facebook:hover { background-color: #5536ef; }
+    .share-zalo {
+      background-color: #ffffff;
     }
-
-    /* Để giảm riêng size chữ cho "Bà Trương Thị Kim Quyên" */
-    .smaller-text {
-      font-size: 0.72rem !important; /* Ưu tiên giảm cỡ */
+    .share-messenger { background-color: #ffffff; }
+    .share-messenger:hover { background-color: #612ce9; }
+    .menu-item-share {
+      background-color: var(--main-color);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      margin-top: 5px;
     }
-
+    .menu-item-share:hover {
+      background-color: var(--hover-color);
+    }
   </style>
 </head>
 <body>
@@ -1673,7 +1457,6 @@ rel="stylesheet"
       <h3>THƯ MỜI TIỆC CƯỚI</h3>
       <hr>
       <p>♥  ♥  ♥  ♥  ♥  ♥  ♥ ♥  ♥  ♥  ♥  ♥  ♥  ♥ ♥  ♥  ♥</p>
-      
       <hr>
     </div>
 
@@ -1712,10 +1495,7 @@ rel="stylesheet"
     <!-- Thông Tin Gia Đình -->
     <section class="section-wrapper" data-animate="fade-in-up">
       <div class="family-info-box">
-        <p class="quote">
-          “Hôn nhân là chuyện cả đời, yêu người vừa ý, cưới người mình thương...”
-        </p>
-
+       
         <div class="family-info-container">
           <!-- Nhà trai -->
           <div class="left-column">
@@ -1726,24 +1506,21 @@ rel="stylesheet"
               <p>Khóm 7, Phường 1, Tx. Ngã Năm, Tp. Sóc Trăng</p>
             </div>
           </div>
-
           <!-- Icon trái tim -->
           <div class="divider">
             <img src="https://cdn-icons-png.flaticon.com/512/2107/2107989.png" alt="heart-icon" />
           </div>
-
           <!-- Nhà gái -->
           <div class="right-column">
             <h3>Nhà Gái</h3>
             <div class="parents-info">
               <p><strong>Ông Võ Thanh Hùng</strong></p>
-              <!-- Đã chỉnh: Thêm .smaller-text để riêng Bà nhỏ hơn -->
               <p><strong><span class="smaller-text">Bà Trương Thị Kim Quyên</span></strong></p>
               <p>Đội 4, Thôn 2, Xã Eatrul, Krông Bông, Đăk Lăk</p>
             </div>
           </div>
         </div>
-
+       
         <!-- Cô dâu - Chú rể -->
         <div class="couple-section">
           <div class="couple-column">
@@ -1758,6 +1535,9 @@ rel="stylesheet"
           </div>
         </div>
       </div>
+      <p class="quote">
+        “Cô dâu chú rể hôm nay đã tìm thấy nhau giữa hàng tỉ người trên thế giới, để từ nay trở đi, khi cuộc sống có nhiều sóng gió hay thử thách, mỗi người đều biết rằng bên cạnh luôn có một bàn tay sẵn sàng nắm lấy và cùng mình vượt qua tất cả.”
+      </p>
     </section>
 
     <!-- Thư Mời (Carousel 3 Ảnh) -->
@@ -1776,7 +1556,7 @@ rel="stylesheet"
       </div>
     </section>
 
-    <!-- PHẦN "TIỆC CƯỚI NHÀ GÁI" -->
+    <!-- TIỆC CƯỚI NHÀ GÁI -->
     <div class="invite-wrapper">
       <div class="invite-content">
         <h2>TIỆC CƯỚI NHÀ GÁI</h2>
@@ -1802,64 +1582,33 @@ rel="stylesheet"
           </div>
         </div>
       </div>
+      <!-- Bỏ phần Lịch, chỉ giữ map -->
       <div class="map-calendar-section">
-        <!-- Lịch tháng 05/2025 (nhà gái) -->
-        <div class="calendar-box">
-          <h3>Tháng 05/2025</h3>
-          <div class="calendar-body">
-            <!-- Hàng đầu tên ngày -->
-           
-            <div class="day day-name">T2</div>
-            <div class="day day-name">T3</div>
-            <div class="day day-name">T4</div>
-            <div class="day day-name">T5</div>
-            <div class="day day-name">T6</div>
-            <div class="day day-name">T7</div>
-            <div class="day day-name">CN</div>
-
-        
-            <div class="day">12</div>
-            <div class="day">13</div>
-            <div class="day">14</div>
-            <div class="day">15</div>
-            <div class="day wedding-date">16</div>
-            <div class="day">17</div>
-            <div class="day">18</div>
-            <div class="day">19</div>
-            <div class="day">20</div>
-            <div class="day">21</div>
-            <div class="day">22</div>
-            <div class="day">23</div>
-            <div class="day">24</div>
-            <div class="day">25</div>
-            <div class="day">26</div>
-            <div class="day">27</div>
-            <div class="day">28</div>
-            <div class="day">29</div>
-            <div class="day">30</div>
-            <div class="day">31</div>
-          </div>
-        </div>
-        <!-- Bản đồ nhà gái -->
         <div class="map-container">
-          <iframe 
+          <iframe
             src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d978.829940867154!2d108.25174022846448!3d12.513962899231878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDMwJzUwLjMiTiAxMDjCsDE1JzA4LjYiRQ!5e1!3m2!1svi!2s!4v1744531093826!5m2!1svi!2s"
-            width="450" height="450" style="border:0;" allowfullscreen="true" loading="lazy"
+            width="400" height="230" style="border:0;" allowfullscreen="true" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+        </div>
+        <div class="map-button-container">
+          <button class="open-map-btn"
+            onclick="window.open('https://www.google.com/maps?ll=12.513952,108.251979&z=17&t=h&hl=vi&gl=US&mapclient=embed&q=12%C2%B030%2750.3%22N+108%C2%B015%2708.6%22E+12.513972,+108.252389@12.5139722,108.2523889', '_blank')">
+            Mở Google Map
+          </button>
         </div>
       </div>
       <div class="invite-footer-decor"></div>
     </div>
-    <!-- HẾT PHẦN "TIỆC CƯỚI NHÀ GÁI" -->
+    <!-- Hết PHẦN "TIỆC CƯỚI NHÀ GÁI" -->
 
-    <!-- PHẦN "TIỆC CƯỚI NHÀ TRAI" -->
+    <!-- TIỆC CƯỚI NHÀ TRAI -->
     <div class="invite-wrapper">
       <div class="invite-content">
         <h2>TIỆC CƯỚI NHÀ TRAI</h2>
         <p>
           <span class="highlight">HÔN LỄ ĐƯỢC CỬ HÀNH TẠI NHÀ HÀNG GOLD PALACE</span><br/>
-          <span class="info-detail">329 NƠ TRANG LONG - PHƯỜNG 13 - BÌNH THẠNH</span>
+          <span class="info-detail">329 Nơ Trang Long - Phường 13 - Bình Thạnh</span>
         </p>
         <div class="time-info-box">
           <div class="time-info-row">
@@ -1879,51 +1628,20 @@ rel="stylesheet"
           </div>
         </div>
       </div>
+      <!-- Bỏ phần Lịch, chỉ giữ map -->
       <div class="map-calendar-section">
-        <!-- Lịch tháng 05/2025 (nhà trai) -->
-        <div class="calendar-box">
-          <h3>Tháng 05/2025</h3>
-          <div class="calendar-body">
-            <!-- Hàng đầu tên ngày -->
-   
-            <div class="day day-name">T2</div>
-            <div class="day day-name">T3</div>
-            <div class="day day-name">T4</div>
-            <div class="day day-name">T5</div>
-            <div class="day day-name">T6</div>
-            <div class="day day-name">T7</div>
-            <div class="day day-name">CN</div>
-            
-
-            <div class="day">12</div>
-            <div class="day">13</div>
-            <div class="day">14</div>
-            <div class="day">15</div>
-            <div class="day">16</div>
-            <div class="day">17</div>
-            <div class="day wedding-date">18</div>
-            <div class="day">19</div>
-            <div class="day">20</div>
-            <div class="day">21</div>
-            <div class="day">22</div>
-            <div class="day">23</div>
-            <div class="day">24</div>
-            <div class="day">25</div>
-            <div class="day">26</div>
-            <div class="day">27</div>
-            <div class="day">28</div>
-            <div class="day">29</div>
-            <div class="day">30</div>
-            <div class="day">31</div>
-          </div>
-        </div>
-        <!-- Bản đồ nhà trai -->
         <div class="map-container">
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.308446938317!2d106.7010809!3d10.8191539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529d8e1cbada9%3A0x5f5d6d5f78a54e60!2sGold%20Palace!5e1!3m2!1svi!2s!4v1744530280465!5m2!1svi!2s"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            width="400" height="230" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
+        </div>
+        <div class="map-button-container">
+          <button class="open-map-btn"
+            onclick="window.open('https://www.google.com/maps?ll=10.819154,106.701081&z=15&t=h&hl=vi&gl=US&mapclient=embed&cid=6871768863250665056', '_blank')">
+            Mở Google Map
+          </button>
         </div>
       </div>
       <div class="invite-footer-decor"></div>
@@ -1992,7 +1710,7 @@ rel="stylesheet"
         </div>
       </div>
 
-      <!-- Concept Việt Phục -->
+      <!-- Concept Việt Phục (đã giảm font-size 1.5rem như yêu cầu) -->
       <h3>Concept Việt Phục</h3>
       <div class="wedding-album-vertical">
         <div class="album-item" data-full="images/album_phuctrang_02.JPG" data-animate="zoom-in">
@@ -2071,7 +1789,6 @@ rel="stylesheet"
         (Chúng tôi rất mong nhận được sự hiện diện của bạn trong ngày vui này)
         <br>
       </p>
-
       <div class="qr-container">
         <div class="qr-bank-info">
           Ngân hàng: TPBANK (Tiên Phong Bank) <br>
@@ -2120,13 +1837,41 @@ rel="stylesheet"
 
   <!-- Back to top -->
   <button id="back-to-top" title="Lên đầu trang">&#9650;</button>
-
-  <!-- Nút Menu nổi (Xác nhận - Gửi tiền) -->
+  
+  <!-- MENU NỔI (luôn hiển thị) -->
   <div class="floating-menu" id="floating-menu">
     <button class="menu-toggle" id="menu-toggle">Menu</button>
     <div class="menu-content show" id="menu-content">
       <a href="#rsvp-section">Xác nhận tham gia</a>
       <a href="#qr-section">Gửi tiền mừng</a>
+      <a>Chia sẻ nhanh:</a>
+      <div class="share-submenu" id="share-submenu">
+        <!-- FB -->
+        <button class="share-btn share-facebook" title="Chia sẻ Facebook">
+          <img
+            src="https://img.icons8.com/?size=100&id=uLWV5A9vXIPu&format=png&color=000000"
+            alt="Facebook"
+            style="width:18px; height:18px;"
+          />
+        </button>
+       
+        <!-- Messenger -->
+        <button class="share-btn share-messenger" title="Chia sẻ Messenger">
+          <img
+            src="https://img.icons8.com/?size=100&id=20419&format=png&color=000000"
+            alt="Messenger"
+            style="width:18px; height:18px;"
+          />
+        </button>
+        <!-- Copy link -->
+        <button class="share-btn share-copy-link" title="Sao chép link thiệp">
+          <img
+            src="https://img.icons8.com/?size=100&id=12771&format=png&color=000000"
+            alt="Share"
+            style="width:18px; height:18px;"
+          />
+        </button>
+      </div>
     </div>
   </div>
 
@@ -2146,8 +1891,8 @@ rel="stylesheet"
     /* ========== Biến cục bộ ========== */
     const musicToggle = document.getElementById('music-toggle');
     const bgMusic = document.getElementById('bg-music');
-    let isPlaying = false; // Mặc định là tắt
-    musicToggle.textContent = '🔇'; // Icon tắt
+    let isPlaying = false;
+    musicToggle.textContent = '🔇';
 
     /* ========== Preloader ========== */
     window.addEventListener('load', () => {
@@ -2186,7 +1931,7 @@ rel="stylesheet"
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.bottom = '-40px';
       heartsContainer.appendChild(heart);
-      const duration = Math.random() * 3 + 4; // 4-7s
+      const duration = Math.random() * 3 + 4; 
       heart.style.animationDuration = duration + 's';
       heart.addEventListener('animationend', () => {
         heart.remove();
@@ -2233,12 +1978,11 @@ rel="stylesheet"
     setInterval(createSparkle, 1000);
 
     /* ========== Countdown Timer ========== */
-    const weddingDate = new Date("May 18, 2025 00:00:00").getTime();
+    const weddingDate = new Date("May 16, 2025 00:00:00").getTime();
     function updateCountdown() {
       const now = new Date().getTime();
       const distance = weddingDate - now;
       if (distance < 0) {
-        document.getElementById("countdown-timer").innerHTML = "Đã đến ngày cưới!";
         return;
       }
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -2422,6 +2166,49 @@ rel="stylesheet"
     menuToggleBtn.addEventListener('click', () => {
       menuContent.classList.toggle('show');
     });
+
+    /* Chia sẻ */
+    const shareURL = window.location.href;
+    const shareTitle = "Thiệp Mời Cưới Tá & Vi";
+
+    const fbBtn = document.querySelector(".share-facebook");
+    const zaloBtn = document.querySelector(".share-zalo");
+    const messengerBtn = document.querySelector(".share-messenger");
+    const copyLinkBtn = document.querySelector(".share-copy-link");
+
+    // Facebook
+    if(fbBtn){
+      fbBtn.addEventListener("click", function() {
+        const fbShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareURL)}&quote=${encodeURIComponent(shareTitle)}`;
+        window.open(fbShareUrl, "_blank");
+      });
+    }
+    // Zalo
+    if(zaloBtn){
+      zaloBtn.addEventListener("click", function() {
+        const zaloShareUrl = `https://zalo.me/share/direct?url=${encodeURIComponent(shareURL)}`;
+        window.open(zaloShareUrl, "_blank");
+      });
+    }
+    // Messenger
+    if(messengerBtn){
+      messengerBtn.addEventListener("click", function() {
+        const messengerShareUrl = `https://www.facebook.com/dialog/send?link=${encodeURIComponent(shareURL)}&app_id=1234567890&redirect_uri=${encodeURIComponent(shareURL)}`;
+        window.open(messengerShareUrl, "_blank");
+      });
+    }
+    // Copy link
+    if(copyLinkBtn){
+      copyLinkBtn.addEventListener("click", function() {
+        navigator.clipboard.writeText(shareURL)
+        .then(() => {
+          alert("Đã sao chép link thiệp vào Bộ nhớ đệm!");
+        })
+        .catch(() => {
+          alert("Không thể sao chép link!");
+        });
+      });
+    }
   </script>
 </body>
 </html>
