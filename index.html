@@ -415,6 +415,37 @@ rel="stylesheet"
         max-width: 65%;
         font-size: 0.85rem;
       }
+
+       /* Thu nhỏ cả khung .calendar-box */
+  .calendar-box {
+    width: 220px;    /* giảm từ 280px */
+    height: 220px;   /* giảm từ 280px */
+    padding: 10px;   /* bớt padding */
+  }
+
+  /* Thu nhỏ font tiêu đề tháng */
+  .calendar-box h3 {
+    font-size: 1.1rem; 
+  }
+
+  /* Giảm khoảng cách giữa các ô ngày */
+  .calendar-body {
+    gap: 4px;  /* thay vì 6px */
+  }
+
+  /* Các ô ngày nhỏ hơn, chữ cũng giảm */
+  .day {
+    height: 30px;     /* thay vì 45px */
+    font-size: 0.75rem; /* giảm chữ một chút */
+  }
+
+  /* Riêng tên ngày T2, T3,... */
+  .day.day-name {
+    font-size: 0.72rem; 
+  }
+
+  /* Nếu muốn ô ngày Chủ Nhật, T2... cũng co lại 
+     => .day { ... } như trên là đủ. */
     }
 
     /* ========== Section Wrapper ========== */
@@ -510,7 +541,7 @@ rel="stylesheet"
     }
 
     .parents-info p {
-      font-size: 0.9rem;
+      font-size: 0.82rem;
       margin: 4px 0;
       color: var(--text-color);
       line-height: 1.4;
@@ -1777,15 +1808,16 @@ rel="stylesheet"
           <h3>Tháng 05/2025</h3>
           <div class="calendar-body">
             <!-- Hàng đầu tên ngày -->
-            <div class="day day-name">CN</div>
+           
             <div class="day day-name">T2</div>
             <div class="day day-name">T3</div>
             <div class="day day-name">T4</div>
             <div class="day day-name">T5</div>
             <div class="day day-name">T6</div>
             <div class="day day-name">T7</div>
+            <div class="day day-name">CN</div>
 
-            <div class="day">11</div>
+        
             <div class="day">12</div>
             <div class="day">13</div>
             <div class="day">14</div>
@@ -1853,15 +1885,16 @@ rel="stylesheet"
           <h3>Tháng 05/2025</h3>
           <div class="calendar-body">
             <!-- Hàng đầu tên ngày -->
-            <div class="day day-name">CN</div>
+   
             <div class="day day-name">T2</div>
             <div class="day day-name">T3</div>
             <div class="day day-name">T4</div>
             <div class="day day-name">T5</div>
             <div class="day day-name">T6</div>
             <div class="day day-name">T7</div>
+            <div class="day day-name">CN</div>
+            
 
-            <div class="day">11</div>
             <div class="day">12</div>
             <div class="day">13</div>
             <div class="day">14</div>
