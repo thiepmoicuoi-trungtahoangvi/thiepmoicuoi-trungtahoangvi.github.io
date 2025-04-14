@@ -12,7 +12,7 @@
     referrerpolicy="no-referrer"
   />
   <!-- Favicon (Logo ở thanh địa chỉ) -->
-  <link rel="icon" href="images/logo_damcuoitrantahoangvi.PNG" type="image/png" />
+  <link rel="icon" href="images/icon_logo_damcuoitrantahoangvi.ico" type="image/ico" />
 
   <!-- Google Fonts -->
   <link
@@ -888,9 +888,17 @@ font-size: 1.0rem;
     }
 
     /* ========== ALBUM CƯỚI + Lightbox ========== */
-    .album-section {
-      margin-top: 40px;
-    }
+  /* Tăng độ rộng tối đa cho nguyên section Album */
+.album-section {
+  width: 100%;
+  max-width: 1400px;  /* Cho phép rộng hơn ở màn hình desktop */
+  margin: 0 auto;
+  padding: 30px 20px; /* Tăng khoảng cách trên dưới */
+  text-align: center; /* Giữ tiêu đề căn giữa */
+}
+
+
+
     .album-section h3 {
       /* Thu nhỏ về 1.5rem cho đồng bộ với section-title */
       font-size: 1.2rem !important;
@@ -912,14 +920,14 @@ font-size: 1.0rem;
       bottom: -5px;
       border-radius: 2px;
     }
-    .wedding-album-landscape,
-    .wedding-album-vertical {
-      display: grid;
-      gap: 20px;
-      justify-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+    .wedding-album-landscape {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  justify-items: center;
+  margin: 0 auto;
+}
+
     @media (min-width: 769px) {
       .wedding-album-landscape,
       .wedding-album-vertical {
@@ -933,22 +941,27 @@ font-size: 1.0rem;
       }
     }
     .album-item {
-      width: 100%;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-    .album-item:hover {
-      transform: scale(1.01);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-    .album-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
+  width: 100%;           /* Mặc định full cột grid */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: #fff; /* Thêm nền trắng để nhìn nổi ảnh */
+}
+.album-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.album-item img {
+  width: 100%;
+  height: auto; 
+  display: block;
+  object-fit: cover; 
+  /* object-fit: cover giúp cắt ảnh cho đồng đều
+     (nếu khung cao hơn/dài hơn), tùy bạn điều chỉnh */
+}
     .lightbox-overlay {
       position: fixed;
       top: 0; 
@@ -1734,87 +1747,93 @@ font-size: 1.0rem;
       <!-- ALBUM CƯỚI + Lightbox -->
       <section class="section-wrapper album-section" data-animate="fade-in-up">
         <h2 class="section-title">Album Cưới</h2>
-  
+        
         <!-- Concept Vũ Garden -->
+        
+
+
         <div class="wedding-album-landscape">
-          <div class="album-item" data-full="images/album_vugarden_01.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_01.JPG" alt="album_vugarden_01" loading="lazy">
+            <!-- Ảnh Bìa -->
+            <div class="album-item" data-full="images_album/Album_Vu_Garden_Bia.JPG" data-animate="zoom-in">
+              <img src="images_album/Album_Vu_Garden_Bia.JPG" alt="Album_Vu_Garden_Bia" loading="lazy">
+            </div>
+
+          <!-- Ảnh 1 -->
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_01.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_01.JPG" alt="Album_Vu_Garden_01" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_18.JPEG" data-animate="zoom-in">
-            <img src="images/album_vugarden_18.JPEG" alt="album_vugarden_18" loading="lazy">
+          <!-- Ảnh 2 -->
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_02.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_02.JPG" alt="Album_Vu_Garden_02" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_19.JPEG" data-animate="zoom-in">
-            <img src="images/album_vugarden_19.JPEG" alt="album_vugarden_19" loading="lazy">
+          <!-- Ảnh 3 -->
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_03.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_03.JPG" alt="Album_Vu_Garden_03" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_14.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_14.JPG" alt="album_vugarden_14" loading="lazy">
+          <!-- Bỏ qua 04, nên tiếp tục với 05 -->
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_05.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_05.JPG" alt="Album_Vu_Garden_05" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/anh_gallery02.JPG" data-animate="zoom-in">
-            <img src="images/anh_gallery02.JPG" alt="album_vugarden_20" loading="lazy">
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_06.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_06.JPG" alt="Album_Vu_Garden_06" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_16.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_16.JPG" alt="album_vugarden_16" loading="lazy">
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_07.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_07.JPG" alt="Album_Vu_Garden_07" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_22.JPEG" data-animate="zoom-in">
-            <img src="images/album_vugarden_22.JPEG" alt="album_vugarden_22" loading="lazy">
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_08.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_08.JPG" alt="Album_Vu_Garden_08" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_20.JPEG" data-animate="zoom-in">
-            <img src="images/album_vugarden_20.JPEG" alt="album_vugarden_20" loading="lazy">
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_09.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_09.JPG" alt="Album_Vu_Garden_09" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_21.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_21.JPG" alt="album_vugarden_21" loading="lazy">
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_10.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_10.JPG" alt="Album_Vu_Garden_10" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_03.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_03.JPG" alt="album_vugarden_03" loading="lazy">
+          <!-- Bỏ qua 11, tiếp tục 12 -->
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_12.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_12.JPG" alt="Album_Vu_Garden_12" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_02.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_02.JPG" alt="album_vugarden_02" loading="lazy">
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_13.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_13.JPG" alt="Album_Vu_Garden_13" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_05.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_05.JPG" alt="album_vugarden_05" loading="lazy">
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_14.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_14.JPG" alt="Album_Vu_Garden_14" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_06.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_06.JPG" alt="album_vugarden_06" loading="lazy">
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_15.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_15.JPG" alt="Album_Vu_Garden_15" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_10.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_10.JPG" alt="album_vugarden_10" loading="lazy">
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_16.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_16.JPG" alt="Album_Vu_Garden_16" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_17.JPEG" data-animate="zoom-in">
-            <img src="images/album_vugarden_17.JPEG" alt="album_vugarden_17" loading="lazy">
+          <!-- Bỏ qua 17 -->
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_18.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_18.JPG" alt="Album_Vu_Garden_18" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_07.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_07.JPG" alt="album_vugarden_07" loading="lazy">
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_19.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_19.JPG" alt="Album_Vu_Garden_19" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_08.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_08.JPG" alt="album_vugarden_08" loading="lazy">
+          <div class="album-item" data-full="images_album/Album_Vu_Garden_20.JPG" data-animate="zoom-in">
+            <img src="images_album/Album_Vu_Garden_20.JPG" alt="Album_Vu_Garden_20" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_vugarden_09.JPG" data-animate="zoom-in">
-            <img src="images/album_vugarden_09.JPG" alt="album_vugarden_09" loading="lazy">
+          
+        <div class="wedding-album-landscape">
+        
+          <div class="album-item" data-full="images_album/VietPhuc02.JPG" data-animate="zoom-in">
+            <img src="images_album/VietPhuc02.JPG" alt="VietPhuc02" loading="lazy">
           </div>
-        </div>
-  
-        <!-- Concept Việt Phục (đã giảm font-size 1.5rem như yêu cầu) -->
-        <h3>Concept Việt Phục</h3>
-        <div class="wedding-album-vertical">
-          <div class="album-item" data-full="images/album_phuctrang_02.JPG" data-animate="zoom-in">
-            <img src="images/album_phuctrang_02.JPG" alt="album_phuctrang_02" loading="lazy">
+          
+          <div class="album-item" data-full="images_album/VietPhuc04.JPG" data-animate="zoom-in">
+            <img src="images_album/VietPhuc04.JPG" alt="VietPhuc04" loading="lazy">
           </div>
-          <div class="album-item" data-full="images/album_phuctrang_03.JPG" data-animate="zoom-in">
-            <img src="images/album_phuctrang_03.JPG" alt="album_phuctrang_03" loading="lazy">
-          </div>
-          <div class="album-item" data-full="images/album_phuctrang_04.JPG" data-animate="zoom-in">
-            <img src="images/album_phuctrang_04.JPG" alt="album_phuctrang_04" loading="lazy">
-          </div>
-          <div class="album-item" data-full="images/album_phuctrang_05.JPG" data-animate="zoom-in">
-            <img src="images/album_phuctrang_05.JPG" alt="album_phuctrang_05" loading="lazy">
-          </div>
-          <div class="album-item" data-full="images/album_phuctrang_06.JPG" data-animate="zoom-in">
-            <img src="images/album_phuctrang_06.JPG" alt="album_phuctrang_06" loading="lazy">
-          </div>
-          <div class="album-item" data-full="images/album_phuctrang_08.JPEG" data-animate="zoom-in">
-            <img src="images/album_phuctrang_08.JPEG" alt="album_phuctrang_08" loading="lazy">
+          <div class="album-item" data-full="images_album/VietPhuc05.JPG" data-animate="zoom-in">
+            <img src="images_album/VietPhuc05.JPG" alt="VietPhuc05" loading="lazy">
           </div>
         </div>
+
+
+        </div>
+      
+       
       </section>
   
       <!-- Lightbox overlay -->
